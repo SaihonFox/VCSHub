@@ -1,0 +1,11 @@
+<resources>
+	<style name = "Theme.VCSHub" parent = "Theme.AppCompat.Light.NoActionBar">
+		<item name="android:textColor">@color/black</item>
+	</style>
+	
+	<style name="Icon" />
+	
+	<style name="Icon.GitHub">
+		<item name="android:src">@drawable/github_icon</item>
+	</style>
+</resources>
