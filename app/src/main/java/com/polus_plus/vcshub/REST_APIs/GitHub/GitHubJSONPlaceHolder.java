@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
+import retrofit2.http.Url;
 
 public interface GitHubJSONPlaceHolder {
 	@GET("user")
@@ -23,4 +24,7 @@ public interface GitHubJSONPlaceHolder {
 	
 	@GET("orgs")
 	Call<ArrayList<Orgs>> getOrgs(@Header("Authorization") String bearerToken);
+	
+	@GET
+	Call<ArrayList<Repos>> getStarred(@Url String url, @Header("Authorization") String bearerToken);
 }

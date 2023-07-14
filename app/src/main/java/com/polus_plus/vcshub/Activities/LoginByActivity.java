@@ -16,6 +16,6 @@ public class LoginByActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_login_by);
 		
 		extras = getIntent().getExtras();
-		((TextView) findViewById(R.id.loginby)).setText(extras.getString("login-by"));
+		((TextView) findViewById(R.id.loginby_textview)).setText(extras.getString("login-by"));
 	}
 }

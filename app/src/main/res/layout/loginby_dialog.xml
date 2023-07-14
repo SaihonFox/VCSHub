@@ -4,7 +4,7 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context=".Activities.LoginByActivity">
+	android:background="@drawable/dialog_bg">
 	
 	<TextView
 		android:id="@+id/loginby_textview"
@@ -12,7 +12,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginTop="16dp"
 		android:fontFamily="@font/roboto_bold"
-		android:text="Login by "
+		android:text="Login by GitHub"
 		android:textSize="32sp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
@@ -20,37 +20,52 @@
 		tools:ignore="HardcodedText" />
 	
 	<EditText
-		android:id="@+id/login"
+		android:id="@+id/token_edittext"
 		android:layout_width="0dp"
 		android:layout_height="50dp"
 		android:layout_marginStart="16dp"
-		android:layout_marginTop="16dp"
+		android:layout_marginTop="32dp"
 		android:layout_marginEnd="16dp"
 		android:background="@drawable/edittext"
-		android:ems="10"
-		android:hint="Login"
+		android:hint="Token"
 		android:inputType="text"
 		android:paddingStart="8dp"
-		android:textSize="16sp"
+		android:paddingEnd="8dp"
+		android:textColorHint="#666666"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/loginby_textview"
-		tools:ignore="HardcodedText" />
+		tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
 	
-	<EditText
-		android:id="@+id/password"
+	<Button
+		android:id="@+id/login_button"
 		android:layout_width="0dp"
 		android:layout_height="50dp"
 		android:layout_marginStart="16dp"
 		android:layout_marginTop="16dp"
 		android:layout_marginEnd="16dp"
-		android:background="@drawable/edittext"
-		android:ems="10"
-		android:hint="Password"
-		android:inputType="text"
-		android:paddingStart="8dp"
-		android:textSize="16sp"
+		android:layout_marginBottom="16dp"
+		android:background="@drawable/button_selector"
+		android:fontFamily="@font/roboto_bold"
+		android:text="Login"
+		android:textColor="@color/white"
+		android:textSize="20sp"
+		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/login" />
+		app:layout_constraintTop_toBottomOf="@+id/remembertoken_checkbox"
+		app:layout_constraintVertical_bias="0.0"
+		tools:ignore="HardcodedText,VisualLintButtonSize,TextContrastCheck" />
+	
+	<CheckBox
+		android:id="@+id/remembertoken_checkbox"
+		android:layout_width="wrap_content"
+		android:layout_height="24dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:button="@drawable/checkbox_selector"
+		android:text="Remember token"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/token_edittext"
+		tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
